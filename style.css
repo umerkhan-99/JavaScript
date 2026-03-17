@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Padding ko layout kharab karne se rokta hai */
+}
+
+body {
+    background-color: #f0f0f0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+main {
+    max-width: 90%; /* Mobile par side se thodi jagah chhodega */
+    width: 500px;   /* Desktop par limit rakhega */
+    margin: 20px auto;
+    padding: 30px 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    text-align: center;
+}
+
+h2 {
+    font-size: clamp(1.5rem, 5vw, 2rem); /* Screen size ke hisaab se text adjust hoga */
+    color: #333;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+/* Image styling - Responsive */
+#myImage {
+    display: block;
+    margin: 20px auto;
+    max-width: 150px; 
+    width: 100%;     
+    height: auto;
+}
+
+/* Button styling */
+button {
+    padding: 12px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    margin: 10px; 
+    width: auto;
+    min-width: 160px; /* Buttons ko barabar size deta hai */
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:active {
+    transform: scale(0.98); /* Click karne par chota sa effect */
+}
+
+/* --- Responsive Media Query --- */
+
+@media (max-width: 480px) {
+    main {
+        padding: 20px 15px;
+    }
+
+    button {
+        display: block; /* Mobile par buttons ek ke niche ek aayenge */
+        width: 100%;    /* Button full width ho jayenge */
+        margin: 10px 0;
+    }
+    
+    #myImage {
+        max-width: 120px;
+    }
+}
